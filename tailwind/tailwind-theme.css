@@ -16,12 +16,12 @@
  */
 @theme {
 	/**
-	 * These theme variables use CSS variables set by WordPress using values
-	 * from your `theme.json` file.
-	 *
-	 * If you are using the classic editor, you may need to use hardcoded
-	 * color values instead of the `var()` functions below.
-	 */
+	  * These theme variables use CSS variables set by WordPress using values
+	  * from your `theme.json` file.
+	  *
+	  * If you are using the classic editor, you may need to use hardcoded
+	  * color values instead of the `var()` functions below.
+	  */
 	--color-background: var(--wp--preset--color--background);
 	--color-foreground: var(--wp--preset--color--foreground);
 	--color-primary: var(--wp--preset--color--primary);
@@ -31,6 +31,22 @@
 	--container-wide: var(--wp--style--global--wide-size);
 
 	/**
-	 * Add your theme below:
-	 */
+	  * Add your theme below:
+	  */
+	/*Images*/
+	--image-hero: url("../bet-vault/assets/img/hero.png");
+	/*Shadows*/
+	--drop-shadow-white-glow: 0 0 5px rgba(255, 255, 255, 1);
+	/*Fonts*/
+	--font-aeonik-light: "Aeonik-light", sans-serif;
+	--font-sans: "Aeonik-medium", system-ui, -apple-system, BlinkMacSystemFont,
+		"Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+	/*Colors*/
+	--color-royal-blue: rgba(112, 102, 36, 1);
+	--color-electric-cyan: rgba(69, 209, 255, 1);
+	--color-neon-lime: rgba(96, 249, 75, 1);
+	--color-midnight-blue: rgba(21, 25, 36, 1);
+	--color-slate-gray: rgba(113, 120, 146, 1);
 }

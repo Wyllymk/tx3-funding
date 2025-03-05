@@ -6,3 +6,486 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
+@utility bg-frame {
+	background-image: linear-gradient(
+			rgba(16, 16, 16, 0.9),
+			rgba(16, 16, 16, 0.9)
+		),
+		var(--image-frame);
+}
+@utility bg-hero {
+	background-image: var(--image-hero);
+}
+@utility bg-price {
+	background-image: linear-gradient(
+			rgba(26, 26, 26, 0.9),
+			rgba(26, 26, 26, 0.9)
+		),
+		var(--image-price);
+}
+@utility drop-shadow-white-glow {
+	filter: var(--drop-shadow-white-glow);
+}
+@utility font-sans {
+	font-family: var(--font-sans);
+}
+
+body.woocommerce-checkout {
+	background-image: linear-gradient(
+			rgba(16, 16, 16, 0.9),
+			rgba(16, 16, 16, 0.9)
+		),
+		var(--image-frame);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: rgba(11, 17, 29, 1);
+	color: white;
+}
+.woocommerce-checkout .entry-header {
+	display: none;
+}
+.woocommerce-checkout .woocommerce.wp-block-group.alignwide {
+	max-width: 100%;
+}
+.woocommerce-form-coupon-toggle {
+	max-width: var(--container-wide);
+	margin-left: auto;
+	margin-right: auto;
+}
+.woocommerce-info::before {
+	color: var(--color-neon-lime);
+}
+.woocommerce-info {
+	border-top-color: var(--color-neon-lime);
+}
+.woocommerce-form-coupon-toggle .woocommerce-info .showcoupon {
+	color: var(--color-electric-cyan);
+}
+form.checkout_coupon.woocommerce-form-coupon {
+	max-width: var(--container-wide);
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid var(--color-slate-gray);
+}
+form.checkout_coupon.woocommerce-form-coupon > p:first-child {
+	color: white;
+}
+.woocommerce .woocommerce-info {
+	background-color: var(--color-midnight-blue);
+}
+.woocommerce-checkout form.checkout_coupon #coupon_code {
+	padding: 0.5rem;
+	border-radius: 5px;
+	background-color: var(--color-midnight-blue);
+	border: 1px solid var(--color-slate-gray);
+	color: white;
+}
+.woocommerce-checkout form.checkout_coupon button {
+	border-radius: 0.5rem;
+	font-weight: 600;
+	background-color: var(--color-neon-lime);
+	color: rgba(17, 17, 17, 1);
+}
+.woocommerce-checkout form.checkout_coupon button:hover {
+	background-color: var(--color-neon-lime);
+	color: rgba(17, 17, 17, 1);
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
+}
+.woocommerce-checkout form.checkout_coupon {
+	background-color: transparent;
+}
+.woocommerce-NoticeGroup .woocommerce-NoticeGroup-checkout {
+	display: none;
+}
+.woocommerce-message {
+	display: none;
+}
+.woocommerce-billing-fields > h3:first-child {
+	display: none;
+}
+.woocommerce-checkout .entry-content > * {
+	max-width: inherit;
+}
+
+form.checkout.woocommerce-checkout {
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	/* gap: 16px; */
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+form.checkout.woocommerce-checkout .first-column {
+	flex: 1 1 calc(55% - 0px); /* 50% width minus the gap */
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+	padding: 0 2rem;
+	border-radius: 0.5rem;
+	height: fit-content;
+}
+@media (max-width: 768px) {
+	form.checkout.woocommerce-checkout {
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 35rem;
+	}
+	form.checkout.woocommerce-checkout .first-column {
+		padding: 1em;
+	}
+	.woocommerce-form-coupon-toggle {
+		width: 100%;
+	}
+}
+form.checkout.woocommerce-checkout .second-column {
+	flex: 1 1 calc(45% - 0px); /* 50% width minus the gap */
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-midnight-blue);
+	border: 1px solid rgba(113, 120, 146, 1);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	height: fit-content; /* Height based on content */
+}
+
+.woocommerce-checkout label,
+.woocommerce-checkout h3 {
+	color: white;
+	margin-top: 0;
+}
+
+#billing_first_name,
+#billing_last_name,
+#billing_email,
+#billing_password,
+#billing_phone,
+#billing_address_1,
+#billing_city,
+#billing_postcode,
+#account_password {
+	border: 1px solid rgba(113, 120, 146, 1);
+	background-color: var(--color-midnight-blue);
+	color: white;
+	padding: 0.5rem;
+	border-radius: 0.2rem;
+}
+
+#billing_first_name:hover,
+#billing_last_name:hover,
+#billing_first_name:focus,
+#billing_last_name:focus,
+#billing_email:hover,
+#billing_email:focus,
+#billing_password:hover,
+#billing_password:focus,
+#billing_phone:hover,
+#billing_phone:focus,
+#billing_address_1:hover,
+#billing_address_1:focus,
+#billing_city:hover,
+#billing_city:focus,
+#billing_postcode:hover,
+#billing_postcode:focus,
+#account_password:hover,
+#account_password:focus {
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
+}
+
+.select2-container--default .select2-selection--single {
+	border-color: rgba(113, 120, 146, 1);
+	background-color: var(--color-midnight-blue);
+	height: 2.5rem;
+	padding: 3px;
+}
+.select2-container--default .select2-selection--single:hover {
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
+}
+.select2-container--default .select2-selection--single:focus {
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
+}
+.select2-container .select2-dropdown,
+.select2-container .select2-selection {
+	border: 1px solid rgba(113, 120, 146, 1);
+}
+#select2-billing_country-container,
+#select2-billing_state-container {
+	color: white;
+	padding: 4px 0 0 5px;
+}
+.select2-selection__arrow {
+	padding: 18px 10px;
+}
+.select2-container .select2-selection--single .select2-selection__arrow b {
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2IoMTEzLCAxMjAsIDE0NikiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+")
+		no-repeat;
+}
+.select2-search.select2-search--dropdown,
+.select2-search__field,
+#select2-billing_country-results,
+#select2-billing_state-results {
+	background-color: var(--color-midnight-blue);
+	color: white;
+}
+#select2-billing_country-results li[data-selected="true"],
+#select2-billing_state-results li[data-selected="true"] {
+	/* Add your CSS styles here */
+	background: linear-gradient(
+		to right,
+		rgba(44, 46, 49, 1),
+		rgba(78, 86, 95, 1)
+	);
+}
+#select2-billing_country-results li[aria-selected="true"],
+#select2-billing_state-results li[aria-selected="true"] {
+	/* Add your CSS styles here */
+	color: white;
+	background: linear-gradient(
+		to right,
+		rgba(44, 46, 49, 1),
+		rgba(78, 86, 95, 1)
+	);
+}
+.select2-dropdown {
+	border: 1px solid rgba(113, 120, 146, 1);
+}
+.woocommerce-checkout table.shop_table {
+	color: white;
+	padding: 1rem 1rem 0;
+	border-radius: 0.5rem;
+	background: linear-gradient(
+		to bottom right,
+		rgba(21, 25, 36, 1) 0%,
+		rgba(21, 25, 36, 1) 35%,
+		rgba(47, 135, 35, 1) 100%
+	);
+	position: relative;
+}
+
+/* Add the pseudo-element for the gradient border */
+.woocommerce-checkout table.shop_table::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 0.5rem; /* Match the parent border-radius */
+	background: linear-gradient(
+		to bottom right,
+		rgba(96, 249, 75, 0) 0%,
+		/* Transparent at top-left */ rgba(96, 249, 75, 1) 100%
+			/* Fully opaque at bottom-right */
+	);
+	/* Create a 1px border effect by inseting the pseudo-element */
+	inset: 0;
+	padding: 1px; /* This creates the 1px border thickness */
+	-webkit-mask:
+		linear-gradient(#fff 0 0) content-box,
+		linear-gradient(#fff 0 0);
+	-webkit-mask-composite: xor;
+	mask-composite: exclude;
+}
+.woocommerce-checkout table.shop_table thead {
+	display: none;
+}
+.woocommerce-checkout table.shop_table td {
+	border-top: none;
+}
+.woocommerce-checkout table.shop_table tfoot th {
+	border-top: none;
+}
+.woocommerce-checkout table.shop_table tfoot td {
+	border-top: none;
+}
+.woocommerce-checkout table.shop_table tbody td.product-name strong {
+	display: none;
+}
+.woocommerce-checkout #payment {
+	color: white;
+	border-radius: 0.5rem;
+	background-color: transparent;
+}
+@media (max-width: 768px) {
+	.woocommerce-checkout #payment,
+	.woocommerce table.shop_table {
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+	}
+}
+.woocommerce table.shop_table th {
+	color: #909191;
+}
+.woocommerce table.shop_table tfoot tr.cart-subtotal {
+	display: none;
+}
+.woocommerce table.shop_table thead th.product-total {
+	display: none;
+}
+.woocommerce table.shop_table tbody td.product-name {
+	font-family: "Jost", Times, serif;
+}
+.woocommerce table.shop_table tbody td.product-name strong,
+.woocommerce table.shop_table .order-total th {
+	color: white;
+}
+.woocommerce
+	table.shop_table
+	tfoot
+	tr.order-total
+	.woocommerce-Price-amount.amount {
+	color: white;
+}
+
+.woocommerce table.shop_table tfoot th,
+.woocommerce table.shop_table tfoot td {
+	/* border-top: 1px solid #3e403f; */
+}
+
+.woocommerce-checkout #payment a {
+	color: var(--color-electric-cyan);
+	text-decoration: underline;
+}
+.woocommerce-checkout #payment a:hover {
+	color: var(--color-neon-lime);
+}
+
+.woocommerce-checkout #payment #place_order {
+	border-radius: 0.5rem;
+	font-weight: 600;
+	background-color: var(--color-neon-lime);
+	color: rgba(17, 17, 17, 1);
+	float: none; /* Remove the default float */
+	display: block; /* Make it a block-level element */
+	margin: 0 auto;
+	padding: 0.8rem 2.5rem;
+}
+
+.woocommerce-page #payment #place_order:hover {
+	box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* WOOCOMMERCE ORDER RECEIVED */
+.woocommerce-order-received .woocommerce-order {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.woocommerce-order-received .woocommerce-order p {
+	margin-top: 0;
+	padding-top: 2rem;
+	color: white;
+}
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details {
+	color: white;
+	padding: 1rem;
+	width: fit-content;
+	background: linear-gradient(
+		to bottom,
+		rgba(12, 17, 23, 1),
+		rgba(12, 17, 23, 0)
+	);
+	border-radius: 0.5rem;
+}
+
+.woocommerce-order-overview.woocommerce-thankyou-order-details.order_details
+	li
+	strong,
+.woocommerce-order .woocommerce-order-details__title {
+	color: white;
+}
+.woocommerce-order
+	.woocommerce-table.woocommerce-table--order-details.shop_table.order_details {
+	width: 35rem;
+}
+.woocommerce-order .woocommerce-customer-details {
+	color: white;
+	width: 35rem;
+}
+.woocommerce-order .woocommerce-customer-details address {
+	background: linear-gradient(
+		to bottom,
+		rgba(12, 17, 23, 1),
+		rgba(12, 17, 23, 0)
+	);
+	border-radius: 0.5rem;
+}
+.woocommerce-order .woocommerce-customer-details h2 {
+	color: white;
+}
+
+@media (max-width: 768px) {
+	.woocommerce-order
+		.woocommerce-table.woocommerce-table--order-details.shop_table.order_details {
+		width: 23rem;
+	}
+	.woocommerce-order .woocommerce-customer-details {
+		width: 23rem;
+	}
+}
+
+form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
+	background-color: #000000 !important;
+	color: #ffffff;
+}
+.ff-section_break_desk h3 {
+	font-weight: 700;
+	font-size: 24px;
+}
+.ff-section_break_desk {
+	font-size: 18px;
+}
+.ff-el-group.ff-el-section-break.ff_left hr {
+	background-color: #dadbdd;
+	border: none;
+	height: 1px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+form.fluent_form_4 .ff-btn-submit:not(.ff_btn_no_style) {
+	background-color: #000000 !important;
+}
+
+.woocommerce-NoticeGroup.woocommerce-NoticeGroup-checkout {
+	flex: 1 1 calc(60% - 16px);
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.5rem;
+	height: fit-content;
+}
+.woocommerce-error::before {
+	top: 1.5em;
+}
+.woocommerce-error li {
+	margin-left: 20px !important;
+}
+.woocommerce form .form-row label .required {
+	color: var(--color-neon-lime);
+}
+input[type="checkbox"] {
+	accent-color: rgba(96, 249, 75, 1); /* Change the checkbox color */
+}
+input[type="radio"] {
+	accent-color: rgba(96, 249, 75, 1); /* Change the checkbox color */
+}
+
+#add_payment_method #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::before {
+	content: "";
+	display: block;
+	border: 1em solid rgba(47, 135, 35, 1);
+	border-right-color: transparent;
+	border-left-color: transparent;
+	border-top-color: transparent;
+}
+.woocommerce-checkout #payment div.payment_box {
+	background-color: rgba(47, 135, 35, 1);
+}
+.woocommerce-checkout #payment div.payment_box p {
+	color: white;
+}
+.woocommerce-checkout form .show-password-input::after {
+	color: rgba(113, 120, 146, 1);
+}
