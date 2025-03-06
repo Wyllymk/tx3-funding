@@ -31,16 +31,15 @@
 }
 
 body.woocommerce-checkout {
-	background-image: linear-gradient(
-			rgba(16, 16, 16, 0.9),
-			rgba(16, 16, 16, 0.9)
-		),
-		var(--image-frame);
+	background-image: var(--image-checkout);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed; /* Ensures the background stays fixed while scrolling */
 	background-color: rgba(11, 17, 29, 1);
 	color: white;
+	min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+	margin: 0; /* Removes default margin */
 }
 .woocommerce-checkout .entry-header {
 	display: none;
@@ -137,6 +136,9 @@ form.checkout.woocommerce-checkout .first-column {
 	}
 	.woocommerce-form-coupon-toggle {
 		width: 100%;
+	}
+	form.checkout.woocommerce-checkout .second-column {
+		margin: 1em;
 	}
 }
 form.checkout.woocommerce-checkout .second-column {
