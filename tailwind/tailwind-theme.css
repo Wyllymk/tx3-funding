@@ -34,7 +34,7 @@
 	  * Add your theme below:
 	  */
 	/*Images*/
-	--image-checkout: url("../tx3-funding/assets/img/checkout.png");
+	--image-checkout: url("../theme/assets/img/checkout.png");
 	/*Shadows*/
 	--drop-shadow-white-glow: 0 0 5px rgba(255, 255, 255, 1);
 	/*Fonts*/

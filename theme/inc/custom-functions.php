@@ -116,3 +116,14 @@ function get_current_page_type() {
 add_filter ('woocommerce_add_to_cart_redirect', function( $url, $adding_to_cart ) {
     return wc_get_checkout_url();
 }, 10, 2 ); 
+
+// add_action('template_redirect', function () {
+//     if (is_singular('product')) {
+//         // The external URL to redirect to
+//         $external_url = 'https://falconfunded.com/table/';
+        
+//         // Perform the redirect
+//         wp_redirect($external_url);
+//         exit;
+//     }
+// });

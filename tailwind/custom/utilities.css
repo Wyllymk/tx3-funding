@@ -6,23 +6,6 @@
  *
  * https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
  */
-@utility bg-frame {
-	background-image: linear-gradient(
-			rgba(16, 16, 16, 0.9),
-			rgba(16, 16, 16, 0.9)
-		),
-		var(--image-frame);
-}
-@utility bg-hero {
-	background-image: var(--image-hero);
-}
-@utility bg-price {
-	background-image: linear-gradient(
-			rgba(26, 26, 26, 0.9),
-			rgba(26, 26, 26, 0.9)
-		),
-		var(--image-price);
-}
 @utility drop-shadow-white-glow {
 	filter: var(--drop-shadow-white-glow);
 }
@@ -165,6 +148,7 @@ form.checkout.woocommerce-checkout .second-column {
 #billing_phone,
 #billing_address_1,
 #billing_city,
+#billing_state,
 #billing_postcode,
 #account_password {
 	border: 1px solid rgba(113, 120, 146, 1);
@@ -188,6 +172,8 @@ form.checkout.woocommerce-checkout .second-column {
 #billing_address_1:focus,
 #billing_city:hover,
 #billing_city:focus,
+#billing_state:hover,
+#billing_state:focus,
 #billing_postcode:hover,
 #billing_postcode:focus,
 #account_password:hover,
@@ -323,9 +309,6 @@ form.checkout.woocommerce-checkout .second-column {
 }
 .woocommerce table.shop_table thead th.product-total {
 	display: none;
-}
-.woocommerce table.shop_table tbody td.product-name {
-	font-family: "Jost", Times, serif;
 }
 .woocommerce table.shop_table tbody td.product-name strong,
 .woocommerce table.shop_table .order-total th {
